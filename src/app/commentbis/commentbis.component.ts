@@ -8,21 +8,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class CommentbisComponent implements OnInit {
   commentFormBis = new FormGroup({
-    nickname: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-    ]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    comment: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-    ]),
-    rating: new FormControl('', [
-      Validators.required,
-      Validators.min(1),
-      Validators.max(5),
-    ]),
-    showemail: new FormControl(false, Validators.required),
+    nickname: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(3)],
+      nonNullable: true,
+    }),
+    email: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+      nonNullable: true,
+    }),
+    comment: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(3)],
+      nonNullable: true,
+    }),
+    rating: new FormControl('', {
+      validators: [Validators.required, Validators.min(1), Validators.max(5)],
+      nonNullable: true,
+    }),
+    showemail: new FormControl(false, {
+      validators: Validators.required,
+      nonNullable: true,
+    }),
   });
 
   constructor() {}
