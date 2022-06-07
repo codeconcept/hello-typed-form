@@ -40,3 +40,8 @@ form textarea, input {
 form select {
     width: 20%;
 }
+
+form [type="checkbox"] {
+  width: 20px;
+  cursor: pointer;
+}
