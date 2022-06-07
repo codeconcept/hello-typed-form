@@ -4,11 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CommentComponent } from './comment/comment.component';
+import { CommentbisComponent } from './commentbis/commentbis.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommentComponent
+    CommentComponent,
+    CommentbisComponent
   ],
   imports: [
     BrowserModule,
